@@ -20,7 +20,7 @@ Make sure to save the workflow when changes are made on the actions or parameter
 
 Initially, the workflow will contain the **Trigger** (left side) and the **Completion** (right side) actions.
 
-![Blank workflow](/manasesjesus/builtio-microservice-monitoring/blob/master/img/blank-workflow.png)
+![Blank workflow](https://github.com/manasesjesus/builtio-microservice-monitoring/blob/master/img/blank-workflow.png)
 
 #### 1. Define the environment parameters
 
@@ -33,7 +33,7 @@ Before adding actions to the workflow, the environment parameters shall be speci
 
 These parameters will be used to configure the different actions in the workflow.
 
-![Workflow parameters](/manasesjesus/builtio-microservice-monitoring/blob/master/img/workflow-parameters.png)
+![Workflow parameters](https://github.com/manasesjesus/builtio-microservice-monitoring/blob/master/img/workflow-parameters.png)
 
 #### 2. Check the /health endpoint
 
@@ -55,13 +55,13 @@ Search for the **Post Message to Channel** action, drag it on the canvas and con
 
 Clicking the connection arrows also displays the available options. Open the setting of this connection to set a condition: if the microservice is not up, execute the Slack action. To achieve this, use as input the exported status from the previous action (i.e. *healthy*).
 
-![Condition](/manasesjesus/builtio-microservice-monitoring/blob/master/img/condition.png)
+![Condition](https://github.com/manasesjesus/builtio-microservice-monitoring/blob/master/img/condition.png)
 
 When the *GET /microservice/health* action completes it exports the *healthy* status, and the next actions will be executed only if the condition is met, i.e. if the microservice is not healthy.
 
 Configuring the **Post Message to Channel** action is straightforward and only requires authorizing Slack, specifying the channel to be notified (e.g. a developers channel in charge of maintaining the microservice) and providing the message to be posted.
 
-![slack-config](/manasesjesus/builtio-microservice-monitoring/blob/master/img/slack-config.png)
+![slack-config](https://github.com/manasesjesus/builtio-microservice-monitoring/blob/master/img/slack-config.png)
 
 Finally, connect this action to the **Completion** action.
 
@@ -72,7 +72,7 @@ Search for the **Cumulocity New Alarm** action, drag it on the canvas and connec
 
 Configuring the alarm action is straightforward and only requires authorizing Cumulocity and specifying the details of the alarm, i.e. the ID of the managed object, a description of the alarm and its type. Cumulocity IoT is a very flexible platform and allows to define customized alarm types, e.g. *c8y_Application__Microservice_unhealthy*.
 
-![alarm](/manasesjesus/builtio-microservice-monitoring/blob/master/img/alarm.png)
+![alarm](https://github.com/manasesjesus/builtio-microservice-monitoring/blob/master/img/alarm.png)
 
 As this is a parallel action to be executed together with the Slack action from the previous step, set up the condition for this action to be executed only when the microservice is not healthy.
 
@@ -84,7 +84,7 @@ Finally, also connect this action to the **Completion** action.
 
 The workflow can be started automatically based on a certain condition. Open the settings of the **Trigger** action and search for **Clock**. Set it up to be executed every 10 minutes. Eventually, the workflow should look similar to:
 
-![Workflow](/manasesjesus/builtio-microservice-monitoring/blob/master/img/workflow.png)
+![Workflow](https://github.com/manasesjesus/builtio-microservice-monitoring/blob/master/img/workflow.png)
 
 ### Execution
 
