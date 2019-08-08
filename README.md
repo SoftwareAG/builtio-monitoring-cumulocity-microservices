@@ -11,7 +11,7 @@ This is a small workflow to monitor the health endpoint of a microservice deploy
 *   Cumulocity credentials, i.e. a tenant, username and password.
 *   A Cumulocity microservice deployed and subscribed to the tenant.
 
-Cumulocity microservices are server-side applications used to extend the platform with specific functionality. Developers are not restricted to any specific tech stack, however, there are certain requirements that must be met. Review the [Microservice SDK guide](https://cumulocity.com/guides/microservice-sdk/introduction/) for more details.
+Cumulocity microservices are server-side applications used to extend the platform with specific functionality and developers are not restricted to any specific tech stack. However, there are certain requirements that must be met. Review the [Microservice SDK guide](https://cumulocity.com/guides/microservice-sdk/introduction/) for more details.
 
 ### Setup
 
@@ -24,7 +24,7 @@ Initially, the workflow will contain the **Trigger** (left side) and the **Compl
 
 #### 1. Define the environment parameters
 
-Before adding actions to the workflow, the environment parameters shall be specified. Open the **Workflow settings** and add the following parameters (key/value pairs):
+Before adding actions to the workflow, the environment parameters must be specified. Open the **Workflow settings** and add the following parameters (key/value pairs):
 
 *   username, password - Cumulocity credentials
 *   server - Cumulocity tenant domain (URL)
@@ -37,7 +37,7 @@ These parameters will be used to configure the different actions in the workflow
 
 #### 2. Check the /health endpoint
 
-The first action will verify if the microservice is up and running. On the workflow dashboard's right side, search for the **Node.js Code** action, drag it on the canvas and connect it to the trigger.
+The first action will verify if a microservice is up and running. On the workflow dashboard's right side, search for the **Node.js Code** action, drag it on the canvas and connect it to the trigger.
 
 Mouse-hovering an action displays the available options, i.e. settings, copy/delete action. Double click will open the settings of the action.
 
