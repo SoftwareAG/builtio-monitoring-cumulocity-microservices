@@ -1,4 +1,4 @@
-## Monitoring Cumulocity microservices using Built.io Flow
+## Monitoring Cumulocity Microservices using Built.io Flow
 
 Third-party services can be employed to monitor microservices deployed in Cumulocity IoT. One cool tool to achieve such goal is [Built.io Flow](https://www.built.io/).
 
